@@ -1,7 +1,20 @@
 .App {
   text-align: center;
 }
+.Titulo{
+  font-size: xx-large;
+  border-radius: 20%;
+  color : red;
+  background-color: navy;
 
+  
+}
+.brands{
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: center;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
