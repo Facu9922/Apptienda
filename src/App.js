@@ -8,7 +8,7 @@ function App() {
       <NavBar/>
       
       <header className="App-header">
-      <ItemListContainer/>
+      <ItemListContainer greeting={"SneakersShop en Construcción"} />
         <img src={logo} className="App-logo" alt="logo" />
         <h1  className="Titulo">Hola</h1>
         <p>
