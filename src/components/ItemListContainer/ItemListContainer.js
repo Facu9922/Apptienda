@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import ItemCount from "../ItemCount/ItemCount";
-import Items from "../Item/Item";
+import Items from "../Items/Items";
 
 
 
