@@ -14,6 +14,14 @@ const products =[
       "precio": 14000,
       "id": 4,
       "stock": 5,
+    },
+    {
+      "marca": "Nike",
+      "modelo": "Jordan 19",
+      "img": "https://images.footlocker.com/is/image/EBFL2/D0418400_a1?wid=519&hei=519&fmt=png-alpha",
+      "precio": 16000,
+      "id": 5,
+      "stock": 5,
     }
 ]
 
