@@ -6,6 +6,7 @@ const products =[
       "precio": 12000,
       "id": 3,
       "stock":4,
+      "detalle": "zapatillas de basket"
     },
     {
       "marca": "Jordan",
@@ -23,6 +24,15 @@ const products =[
       "id": 5,
       "stock": 5,
     }
+    
 ]
 
 export default products
+
+export const getProductsById = (id)=>{
+  return new Promise (resolve=>{
+    setTimeout(() => {
+      resolve(products.find(prod=> prod.id === id))
+    },500);
+  })
+}

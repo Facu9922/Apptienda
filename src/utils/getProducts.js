@@ -9,7 +9,7 @@ const getProducts = ()=>{
             }else{
                 reject("error")
             }
-        }, 4000)
+        }, 400)
     })
 }
 export default getProducts
