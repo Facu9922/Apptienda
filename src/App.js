@@ -13,6 +13,7 @@ function App() {
       <header className="App-header">
       <ItemListContainer greeting={"SneakersShop en Construcción"} />
       <ItemDetailContainer id={3}/>
+      <ItemDetailContainer id={4}/>
       
        
         

@@ -1,12 +1,14 @@
 
 
 const ItemdDetail= ({product}) =>{
-    const {id,stock, img, modelo, marca} =product
+    const {id,stock, img, modelo, marca,detalle,size} =product
     return(
-        <section>
-            <h1>Detalle del producto:</h1>
-            <h2>{marca}-{modelo} </h2>
-            <img className="w-50"src={img} alt="img"/>
+        <section className="border py-2">
+            <h1>Detail:</h1>
+            <h2>{marca} - {modelo} </h2>
+            <img className="w-25"src={img} alt="img"/>
+            <h3 className="sizesStyle">Sizes: {size} </h3>
+            <p className="detailP"> {detalle} </p>
             <h3> ID: {id} </h3>
             <h3> Stock: {stock} </h3>
         </section>
