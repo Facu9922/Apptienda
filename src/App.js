@@ -2,6 +2,7 @@
 import './App.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <NavBar/>
       <header className="App-header">
       <ItemListContainer greeting={"SneakersShop en Construcción"} />
+      <ItemDetailContainer id={3}/>
       
        
         

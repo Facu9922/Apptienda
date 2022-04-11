@@ -1,22 +1,25 @@
 import { getProductsById } from "../../Mock/ProductsMock";
-import ItemdDetail from "../ItemDetail/ItemDetail";
+import ItemDetail from "../ItemDetail/ItemDetail";
 import { useEffect, useState } from "react";
 
-const ItemDetailContainer =()=>{
-    const [product, setProdcut] = useState()
+
+const ItemDetailContainer =({id})=>{
+    const [product, setProdcut] = useState({})
 
     useEffect(()=>{
-        getProductsById().then(item=>{
+        getProductsById(id).then((item)=>{
             setProdcut(item)
         })
-        return(()=>{
+         return(()=>{
             setProdcut()
-        })
+        }) 
     }, [])
 
     return( 
+        
         <div>
-            <ItemdDetail {...product}/>
+            
+            <ItemDetail product={product}/>
         </div>
     )
 }

@@ -24,7 +24,7 @@ return <div className="d-flex flex-row">
                 <h3> Brand: {producto.marca}</h3>
                 <h5> Model: {producto.modelo}</h5>
                 <h2 class="price"> {producto.precio} $</h2>
-                <ItemDetailContainer/>
+                
                 <a href="#" class="buy">Buy Now</a>
             </div>
   
