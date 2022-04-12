@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import getProducts from "../../utils/getProducts";
-import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer"
+import { Link } from "react-router-dom";
 
 
 
@@ -25,7 +25,7 @@ return <div className="d-flex flex-row">
                 <h5> Model: {producto.modelo}</h5>
                 <h2 class="price"> {producto.precio} $</h2>
                 
-                <a href="#" class="buy">Buy Now</a>
+                <Link className="buy" to={`/detail/${producto.id}`}>See Detail</Link>
             </div>
   
     </div>

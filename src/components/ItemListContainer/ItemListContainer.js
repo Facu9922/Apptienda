@@ -1,33 +1,32 @@
-import React,{useState} from "react";
-import ItemCount from "../ItemCount/ItemCount";
+import { useEffect, useState } from "react";
+import getProducts from "../../utils/getProducts";
 import Items from "../Items/Items";
+import { useParams } from "react-router-dom";
+
 
 
 
 
 
 const ItemListContainer =(props)=>{
-const [count, setCount] = useState(1)
+    const [products, setProdcuts] =useState([])
 
+    const{ marcaId }= useParams()
+    console.log(marcaId)
+    
+    useEffect(()=>{
+        getProducts(marcaId).then(prods=>{
+            setProdcuts(prods)
+        })
+    },[marcaId])
 
-
-
-const onAdd =(cond)=>{
-    if(cond === "-"){
-        setCount(count -1)
-    }
-    if( cond === "+"){
-        setCount(count +1)
-    }
-  }
-const stock = 10;
-const initial = 1;
+    
     return(
         <div>
             <h1>{props.greeting}</h1>
             
-            <Items/>
-            <ItemCount onAdd={onAdd} stock={stock} initial={initial} count={count} />
+            <Items products={products} />
+            
         
         </div>
         

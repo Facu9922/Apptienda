@@ -1,13 +1,14 @@
 import CartWidget from "./CartWidget/CartWidget"
+import { BrowserRouter, Routes, Route, Link} from "react-router-dom"
 const NavBar=()=>{
     return(
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
         <nav class="navbar navbar-light bg-light">
   <div class="container">
-    <a class="navbar-brand" href="#">
+    <Link to="/" class="navbar-brand">
       <img src={"./images/SS.png"} alt="" width="100" height="90"/>
-    </a>
+    </Link>
   </div>
 </nav>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +23,7 @@ const NavBar=()=>{
                 <a class="nav-link" href="#">Women´s</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Clothing</a>
+                <Link  className="nav-link" to="/list">Sneakers</Link>
               </li>
               <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
