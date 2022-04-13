@@ -18,7 +18,7 @@ const ItemDetailContainer =({id})=>{
          return(()=>{
             setProdcut()
         }) 
-    }, [])
+    }, [productId])
 
     return( 
         

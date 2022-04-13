@@ -1,5 +1,5 @@
 import CartWidget from "./CartWidget/CartWidget"
-import { BrowserRouter, Routes, Route, Link} from "react-router-dom"
+import {  Link} from "react-router-dom"
 const NavBar=()=>{
     return(
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -17,30 +17,30 @@ const NavBar=()=>{
           <div class="collapse navbar-collapse " id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Men´s</a>
+              <Link className="nav-link" to="marca/Jordan"> Jordan </Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Women´s</a>
+              <Link  className="nav-link" to="marca/Nike">  Nike  </Link>
               </li>
               <li class="nav-item">
                 <Link  className="nav-link" to="/list">Sneakers</Link>
               </li>
-              <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           {/*    <li className="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Brands
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><img class="mb-2 mx-5 border-top " src={"./images/nike.svg"} alt="" width="70" height="90"/><a class=" brands mx-5" href="#">Nike</a></li>
-            <li><img class="mb-2 mx-5 border-top" src={"./images/jordan.svg"} alt="" width="70" height="90"/> <a class=" brands mx-5 " href="#">Jordan</a></li>
+          <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li className="brands mx-5"> </li>
+            <li className="brands mx-5"> </li>
             
             
           </ul>
-        </li>
+        </li> */}
               <li class="nav-item">
-                <a class="nav-link"href="#">Releases</a>
+                <a class="nav-link">Releases</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link"href="#">Sale</a>
+                <a class="nav-link">Sale</a>
               </li>
             </ul>
           </div>

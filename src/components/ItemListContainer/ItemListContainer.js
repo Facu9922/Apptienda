@@ -12,7 +12,7 @@ const ItemListContainer =(props)=>{
     const [products, setProdcuts] =useState([])
 
     const{ marcaId }= useParams()
-    console.log(marcaId)
+  /*   console.log(marcaId) */
     
     useEffect(()=>{
         getProducts(marcaId).then(prods=>{

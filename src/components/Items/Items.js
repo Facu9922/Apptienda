@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 
 
 
-const Items =()=>{
-const [productos, setProdcuts]= useState([])
+const Items =({products})=>{
+/* const [productos, setProdcuts]= useState([])
 
 useEffect(()=>{
 getProducts().then(prods=>setProdcuts(prods)).catch(error=>console.log(error))
-},[])
+},[]) */
 return <div className="d-flex flex-row">
 
-    {productos.map((producto)=>
+    {products.map((producto)=>
     <section class="d-flex justify-content-center mx-2">
         <div class="card d-flex justify-content-center">
 
