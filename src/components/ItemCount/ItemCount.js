@@ -4,13 +4,15 @@ import { useState } from "react"
 
 
 const InputCount =({onConfirm, stock, initial=1})=>{
-    
+   
    console.log(stock)
     const [count, setCount] =useState(initial)
 
-    const handleChange = ({target})=>{
-       
-        setCount(target.value)
+    const handleChange = (e)=>{
+       if (e.target.value <= stock){
+        setCount(e.target.value)
+       } 
+        
     }
     
     return (

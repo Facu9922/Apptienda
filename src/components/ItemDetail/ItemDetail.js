@@ -37,7 +37,7 @@ const ItemdDetail= ({product}) =>{
             {/* <ItemCount onAdd={onAdd} stock={stock} initial={initial} count={count} /> */}
             <footer>
                 
-              {cantidad >0 ? <Link to="/cart">Go to Cart </Link> : < Count onConfirm={handleAdd} /> } 
+              {cantidad >0 ? <Link to="/cart">Go to Cart </Link> : < Count onConfirm={handleAdd} stock={stock}/> } 
               </footer>
         </section>
     )
