@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from "react";
-import getProducts from "../../utils/getProducts";
+
+
 import { Link } from "react-router-dom";
 
 

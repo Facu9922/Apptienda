@@ -1,17 +1,47 @@
 import React from "react"
+import { useState } from "react"
 
 
-const ItemCount =({onAdd, stock, initial, count})=>{
-   
-    return(
-    <div class="border-bottom border-4 py-2">
-        <button class="btn btn-primary me-3" onClick={()=>{if(count < stock) onAdd ("+")}}>+</button>
-             {count}
-             
-         <button class="btn btn-primary mx-3" onClick={()=>{if(count > initial) onAdd ("-")}}>-</button>
+
+const InputCount =({onConfirm, stock, initial=1})=>{
     
-    </div>
+   console.log(stock)
+    const [count, setCount] =useState(initial)
+
+    const handleChange = ({target})=>{
+       
+        setCount(target.value)
+    }
+    
+    return (
+        <div>
+            <input type="number" onChange={handleChange} value={count}/>
+            <button onClick={()=>onConfirm(count)}>Add to Cart</button>
+    
+        </div>
     )
 }
+export const ButtonCount = ({onConfirm, stock, initial=1})=>{
+    const [count, setCount] =useState(initial)
+    const increment = () =>{
+        
+            setCount(count + 1)
+        
+    }
+    const decrement = ()=>{
+        
+            setCount(count - 1)
+        
+    }
+    return(
+        <div>
+            <button onClick={decrement}>-</button> 
+            <p>{count}</p>
+            <button onClick={increment}>+</button>
+            <button onClick={() => onConfirm(count)}>add to cart</button>
+        </div>
+    )
+    
+}
 
-export default ItemCount
+export default InputCount
