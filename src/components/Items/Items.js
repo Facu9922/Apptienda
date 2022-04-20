@@ -1,6 +1,7 @@
 
-
+import  { useContext } from "react" 
 import { Link } from "react-router-dom";
+
 
 
 
@@ -10,6 +11,9 @@ const Items =({products})=>{
 useEffect(()=>{
 getProducts().then(prods=>setProdcuts(prods)).catch(error=>console.log(error))
 },[]) */
+
+
+
 return <div className="d-flex flex-row">
 
     {products.map((producto)=>

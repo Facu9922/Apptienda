@@ -1,7 +1,9 @@
-import {useState} from "react";
+import {useState, useContext} from "react";
 import { ButtonCount } from "../ItemCount/ItemCount";
 import InputCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
+import CartContext from "../../context/CartContext";
+
 
 
 
@@ -10,14 +12,22 @@ import { Link } from "react-router-dom";
 
 
 const ItemdDetail= ({product}) =>{
-    const {id,stock, img, modelo, marca,detalle,size} =product
+    const {id,stock, img, modelo, marca,detalle,size,precio,} =product
   /*   const [count, setCount] = useState(1) */
     const [tipoInput,SetTipoInput] =useState(true)
-    const [cantidad, setCant] = useState(0)
+    const [cantidad, setCant] = useState()
+    
+    const {addItem, isInCart} = useContext(CartContext)
 
     const handleAdd = (count)=>{
-        console.log("agregar al carrito")
+        console.log(count)
         setCant(count)
+        const objProd = {
+            id, marca,modelo, precio, cantidad
+        }
+        
+        addItem([{...objProd, cantidad: count}])
+        
     }
     
     const Count = tipoInput ? ButtonCount : InputCount
@@ -37,7 +47,7 @@ const ItemdDetail= ({product}) =>{
             {/* <ItemCount onAdd={onAdd} stock={stock} initial={initial} count={count} /> */}
             <footer>
                 
-              {cantidad >0 ? <Link to="/cart">Go to Cart </Link> : < Count onConfirm={handleAdd} stock={stock}/> } 
+              { isInCart(id) ? <Link to="/cart">Go to Cart </Link> : < Count onConfirm={handleAdd} stock={stock}/> } 
               </footer>
         </section>
     )
