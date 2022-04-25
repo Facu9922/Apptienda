@@ -20,16 +20,23 @@ const ItemdDetail= ({product}) =>{
     const {addItem, isInCart} = useContext(CartContext)
 
     const handleAdd = (count)=>{
-        console.log(count)
+        const productObj = {
+            id, marca,precio, cantidad: count
+        }
+
+        addItem(productObj)
+    }
+        /* console.log(count)
+        
         setCant(count)
         const objProd = {
-            id, marca,modelo, precio, cantidad
+            id, marca,modelo, precio, cantidad : count,
         }
         
         addItem([{...objProd, cantidad: count}])
-        
+        console.log(cantidad)
     }
-    
+     */
     const Count = tipoInput ? ButtonCount : InputCount
 
 
@@ -43,6 +50,8 @@ const ItemdDetail= ({product}) =>{
             <p className="detailP"> {detalle} </p>
             <h3> ID: {id} </h3>
             <h3> Stock: {stock} </h3>
+            
+
             <button onClick={() => SetTipoInput(!tipoInput)}>Cambiar Count</button>
             {/* <ItemCount onAdd={onAdd} stock={stock} initial={initial} count={count} /> */}
             <footer>

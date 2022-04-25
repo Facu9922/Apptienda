@@ -7,6 +7,7 @@ import Form from './components/ItemDetail/Form/Form';
 import { BrowserRouter, Routes, Route, Link} from "react-router-dom"
 import { useState, createContext } from 'react';
 import { CartContextProvider } from "./context/CartContext"
+import Cart from './Cart/Cart';
 
 /* export const Context = createContext() */
 
@@ -27,6 +28,7 @@ function App() {
             <Route path='/detail/:productId' element={<ItemDetailContainer  />}/>
             <Route path='/marca/:marcaId' element={<ItemListContainer/>}/>
             <Route path ="/form" element={<Form/>}/>
+            <Route path='/cart' element={<Cart />} />
           </Routes>
         </BrowserRouter>
         </CartContextProvider>  
