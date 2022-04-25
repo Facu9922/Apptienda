@@ -23,7 +23,7 @@ const InputCount =({onConfirm, stock, initial=1})=>{
         </div>
     )
 }
-export const ButtonCount = ({onConfirm, stock, initial=1})=>{
+/* export const ButtonCount = ({onConfirm, stock, initial=1})=>{
     const [count, setCount] =useState(initial)
     const increment = () =>{
         
@@ -44,6 +44,6 @@ export const ButtonCount = ({onConfirm, stock, initial=1})=>{
         </div>
     )
     
-}
+} */
 
 export default InputCount

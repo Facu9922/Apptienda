@@ -1,10 +1,10 @@
 import {useState, useContext} from "react";
-import { ButtonCount } from "../ItemCount/ItemCount";
+/* import { ButtonCount } from "../ItemCount/ItemCount"; */
 import InputCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 import CartContext from "../../context/CartContext";
 
-
+import Select from "react-select"
 
 
 
@@ -14,14 +14,14 @@ import CartContext from "../../context/CartContext";
 const ItemdDetail= ({product}) =>{
     const {id,stock, img, modelo, marca,detalle,size,precio,} =product
   /*   const [count, setCount] = useState(1) */
-    const [tipoInput,SetTipoInput] =useState(true)
+    /* const [tipoInput,SetTipoInput] =useState(true)
     const [cantidad, setCant] = useState()
-    
+     */
     const {addItem, isInCart} = useContext(CartContext)
-
+    
     const handleAdd = (count)=>{
         const productObj = {
-            id, marca,precio, cantidad: count
+            id, marca,precio, size, cantidad: count
         }
 
         addItem(productObj)
@@ -37,8 +37,13 @@ const ItemdDetail= ({product}) =>{
         console.log(cantidad)
     }
      */
-    const Count = tipoInput ? ButtonCount : InputCount
+    const Count =  InputCount
 
+    const options =[
+        {value: "39", label: "39"},
+        {value: "40", label: "40"}
+    ]
+    
 
 
     return(
@@ -46,13 +51,14 @@ const ItemdDetail= ({product}) =>{
             <h1>Detail:</h1>
             <h2>{marca} - {modelo} </h2>
             <img className="w-25"src={img} alt="img"/>
-            <h3 className="sizesStyle">Sizes: {size} </h3>
+            <h3 className="sizesStyle">Sizes: </h3>
+            <Select options={options} />
             <p className="detailP"> {detalle} </p>
             <h3> ID: {id} </h3>
             <h3> Stock: {stock} </h3>
             
 
-            <button onClick={() => SetTipoInput(!tipoInput)}>Cambiar Count</button>
+            {/* <button onClick={() => SetTipoInput(!tipoInput)}>Cambiar Count</button> */}
             {/* <ItemCount onAdd={onAdd} stock={stock} initial={initial} count={count} /> */}
             <footer>
                 

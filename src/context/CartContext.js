@@ -32,7 +32,10 @@ export const CartContextProvider = ({children})=>{
         const products= cart.filter(prod => prod.id !== id)
         setCart(products)
     }
-
+    
+        
+        
+    
     return(
         
         <CartContext.Provider value={{
@@ -42,6 +45,7 @@ export const CartContextProvider = ({children})=>{
              isInCart,
              clearCart,
              removeItem,
+             
         }}>
         
             {children}
