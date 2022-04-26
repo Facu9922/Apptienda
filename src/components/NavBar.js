@@ -1,6 +1,21 @@
 import CartWidget from "./CartWidget/CartWidget"
 import {  Link} from "react-router-dom"
+import { firestoreDb } from "../services/firebase"
+import {getDocs, collection} from "firebase/firestore"
+import { useEffect, useState } from "react"
 const NavBar=()=>{
+    const [marca , setMarcas] =useState([])
+    useEffect(()=>{
+      getDocs(collection(firestoreDb, "marca")).then(response=>{
+        const marca = response.docs.map(doc=>{
+          return{id: doc.id, ...doc.data}
+        })
+        setMarcas(marca)
+      })
+    },[])
+
+
+
     return(
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">

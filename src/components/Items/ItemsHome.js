@@ -12,14 +12,14 @@ getProducts().then(prods=>setProdcuts(prods)).catch(error=>console.log(error))
 
 
 
-return <div className="d-flex flex-row">
+return <div className="d-flex">
 
     {products.map((producto)=>
-    <section class="d-flex justify-content-around ">
-        <div class="card d-flex justify-content-around mx-5">
+    <section>
+        <div>
 
-            <div class="imgBox">
-                <Link to={`/detail/${producto.id}`}><img  src= {producto.img} alt={producto.marca} /> </Link>
+            <div>
+                <Link to={`/detail/${producto.id}`}><img  className="w-25" src= {producto.img} alt={producto.marca} /> </Link>
             </div>
   
             
