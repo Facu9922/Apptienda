@@ -36,6 +36,8 @@ const NavBar=()=>{
               </li>
               <li class="nav-item">
               <Link  className="nav-link" to="marca/Nike">  Nike  </Link>
+              </li><li class="nav-item">
+              <Link  className="nav-link" to="marca/Vans">  Vans </Link>
               </li>
               <li class="nav-item">
                 <Link  className="nav-link" to="/list">Sneakers</Link>
@@ -55,7 +57,7 @@ const NavBar=()=>{
                 <a class="nav-link">Releases</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link">Sale</a>
+              <Link  className="nav-link" to="/sale">Sale</Link>
               </li>
             </ul>
           </div>

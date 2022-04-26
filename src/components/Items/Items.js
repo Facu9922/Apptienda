@@ -14,7 +14,7 @@ getProducts().then(prods=>setProdcuts(prods)).catch(error=>console.log(error))
 
 
 
-return <div className="d-flex flex-row">
+return <div className="d-flex flex-row container-fluid">
 
     {products.map((producto)=>
     <section class="d-flex justify-content-center mx-2">

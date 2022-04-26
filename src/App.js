@@ -9,6 +9,7 @@ import { useState, createContext } from 'react';
 import { CartContextProvider } from "./context/CartContext"
 import Cart from './Cart/Cart';
 import Home from './Home/Home';
+import Sale from "./sale/Sale"
 
 /* export const Context = createContext() */
 
@@ -30,6 +31,7 @@ function App() {
             <Route path='/marca/:marcaId' element={<ItemListContainer/>}/>
             <Route path ="/form" element={<Form/>}/>
             <Route path='/cart' element={<Cart />} />
+            <Route path='/sale' element={<Sale />} />
           </Routes>
         </BrowserRouter>
         </CartContextProvider>  
