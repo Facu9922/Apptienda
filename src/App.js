@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route, Link} from "react-router-dom"
 import { useState, createContext } from 'react';
 import { CartContextProvider } from "./context/CartContext"
 import Cart from './Cart/Cart';
+import Home from './Home/Home';
 
 /* export const Context = createContext() */
 
@@ -22,7 +23,7 @@ function App() {
           <NavBar/>
             <Link to="/form" > Form </Link>
           <Routes>
-            <Route path='/' element= {<h1>HOME</h1>}/>
+            <Route path='/' element= {<Home/>}/>
             <Route path='*' element={<h1>NOT FOUND 404</h1>}/>
             <Route path='/list' element={<ItemListContainer greeting={"SneakersShop en Construcción"} />} />
             <Route path='/detail/:productId' element={<ItemDetailContainer  />}/>

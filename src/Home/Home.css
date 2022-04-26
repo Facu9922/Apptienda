@@ -1,0 +1,19 @@
+.fondoHome{
+    background-image: url(https://images.footlocker.com/content/dam/final/FootLockerInc/site/homepage/2022/april/220425-flinc-crocs-asp.jpg);
+    width: 1365px;
+    height: 250px;
+    background-repeat: no-repeat;
+}
+
+.tituloFondoHome{
+    font-weight: bolder;
+    text-align: end;
+    padding-right: 200px;
+}
+.textoFondoHome{
+    font-size: large;
+    text-align: end;
+    padding-right: 20px;
+    
+    
+}

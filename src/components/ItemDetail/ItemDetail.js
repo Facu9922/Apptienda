@@ -12,6 +12,7 @@ import Select from "react-select"
 
 
 const ItemdDetail= ({product}) =>{
+    const [selectedSize, setSelectedSize] = useState("")
     const {id,stock, img, modelo, marca,detalle,size,precio,} =product
   /*   const [count, setCount] = useState(1) */
     /* const [tipoInput,SetTipoInput] =useState(true)
@@ -21,7 +22,7 @@ const ItemdDetail= ({product}) =>{
     
     const handleAdd = (count)=>{
         const productObj = {
-            id, marca,precio, size, cantidad: count
+            id, img, marca,precio, size, modelo, cantidad: count , selectedSize
         }
 
         addItem(productObj)
@@ -52,7 +53,7 @@ const ItemdDetail= ({product}) =>{
             <h2>{marca} - {modelo} </h2>
             <img className="w-25"src={img} alt="img"/>
             <h3 className="sizesStyle">Sizes: </h3>
-            <Select options={options} />
+            <Select options={options} onChange={e=>setSelectedSize(e.value)} />
             <p className="detailP"> {detalle} </p>
             <h3> ID: {id} </h3>
             <h3> Stock: {stock} </h3>
