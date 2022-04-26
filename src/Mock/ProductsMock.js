@@ -1,4 +1,4 @@
-const products =[
+/* const products =[
     {
       "marca": "Jordan",
       "modelo": "6-17-23",
@@ -41,4 +41,4 @@ export const getProductsById = (id)=>{
     },500);
   })
 }
-
+ */
