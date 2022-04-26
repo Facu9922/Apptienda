@@ -19,7 +19,7 @@ return <div className="d-flex flex-row">
         <div class="card d-flex justify-content-around mx-5">
 
             <div class="imgBox">
-                <img  src= {producto.img} alt={producto.marca} />
+                <Link to={`/detail/${producto.id}`}><img  src= {producto.img} alt={producto.marca} /> </Link>
             </div>
   
             
