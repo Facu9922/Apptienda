@@ -42,7 +42,8 @@ const ItemdDetail= ({product}) =>{
 
     const options =[
         {value: "39", label: "39"},
-        {value: "40", label: "40"}
+        {value: "40", label: "40"},
+        {value: "41", label: "41"}
     ]
     
 
@@ -51,19 +52,20 @@ const ItemdDetail= ({product}) =>{
         <section className="border py-2">
             <h1>Detail:</h1>
             <h2>{marca} - {modelo} </h2>
+            <h2> $ {precio}</h2>
             <img className="w-25"src={img} alt="img"/>
             <h3 className="sizesStyle">Sizes: </h3>
-            <Select options={options} onChange={e=>setSelectedSize(e.value)} />
-            <p className="detailP"> {detalle} </p>
-            <h3> ID: {id} </h3>
-            <h3> Stock: {stock} </h3>
+            <Select className="container" options={options} onChange={e=>setSelectedSize(e.value)} />
+            <p className="detailP h5"> {detalle} </p>
+            <h3  className="h6"> ID: {id} </h3>
+            <h3  className="h6"> Stock: {stock} </h3>
             
 
             {/* <button onClick={() => SetTipoInput(!tipoInput)}>Cambiar Count</button> */}
             {/* <ItemCount onAdd={onAdd} stock={stock} initial={initial} count={count} /> */}
             <footer>
                 
-              { isInCart(id) ? <Link to="/cart">Go to Cart </Link> : < Count onConfirm={handleAdd} stock={stock}/> } 
+              { isInCart(id) ? <Link className="h3" to="/cart">Go to Cart </Link> : < Count onConfirm={handleAdd} stock={stock}/> } 
               </footer>
         </section>
     )

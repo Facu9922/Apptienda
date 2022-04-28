@@ -12,34 +12,34 @@ const NavBar=()=>{
         })
         setMarcas(marca)
       })
-    },[])
+    },[marca])
 
 
 
     return(
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-        <nav class="navbar navbar-light bg-light">
-  <div class="container">
-    <Link to="/" class="navbar-brand">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="container-fluid">
+        <nav className="navbar navbar-light bg-light">
+  <div className="container">
+    <Link to="/" className="navbar-brand">
       <img src={"./images/SS.png"} alt="" width="100" height="90"/>
     </Link>
   </div>
 </nav>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse " id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
+          <div className="collapse navbar-collapse " id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
               <Link className="nav-link" to="marca/Jordan"> Jordan </Link>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
               <Link  className="nav-link" to="marca/Nike">  Nike  </Link>
-              </li><li class="nav-item">
+              </li><li className="nav-item">
               <Link  className="nav-link" to="marca/Vans">  Vans </Link>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <Link  className="nav-link" to="/list">Sneakers</Link>
               </li>
            {/*    <li className="nav-item dropdown">
@@ -53,22 +53,22 @@ const NavBar=()=>{
             
           </ul>
         </li> */}
-              <li class="nav-item">
-                <a class="nav-link">Releases</a>
+              <li className="nav-item">
+              <Link  className="nav-link" to="marca/OtherBrands">  Other Brands </Link>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
               <Link  className="nav-link" to="/sale">Sale</Link>
               </li>
             </ul>
           </div>
           <CartWidget/>
-          <form class="d-flex me-4">
+          <form className="d-flex me-4">
 
-      <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search"/>
+      <input className="form-control me-1" type="search" placeholder="Search" aria-label="Search"/>
       
-      <button class="btn btn-outline-dark" type="submit">Search</button>
+      <button className="btn btn-outline-dark" type="submit">Search</button>
     </form>
-          <button type="button" class="btn btn-dark me-3">Login</button>
+          <button type="button" className="btn btn-dark me-3">Login</button>
         </div>
       </nav>
        

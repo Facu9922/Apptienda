@@ -19,7 +19,7 @@ const ItemListContainer =(props)=>{
         /* getProducts(marcaId).then(prods=>{
             setProdcuts(prods)
         }) */
-        const collectionRef= marcaId ? query (collection(firestoreDb, "products"), where("marca", "==", marcaId)) : collection(firestoreDb, "products")
+        const collectionRef = marcaId ? query (collection(firestoreDb, "products"), where("marca", "==", marcaId)) : collection(firestoreDb, "products")
 
         getDocs(collectionRef).then(response =>{
             console.log(response)

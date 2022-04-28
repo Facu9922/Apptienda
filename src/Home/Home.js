@@ -25,16 +25,18 @@ const Home = ()=>{
     return(
         <>
         
-        <div className="fondoHome">
-        <h1 className='tituloFondoHome'>Reservartions Open</h1>
-        <p className='textoFondoHome'>Reserve your pair of the new Crocs x Cinnamon Toast Crunch All-Terrain Clog through our app now!</p>
+        <div className="fondoHome container-fluid">
+        <h1 className='tituloFondoHome  container-fluid'>Reservartions Open</h1>
+        <p className='textoFondoHome  container-fluid'>Reserve your pair of the new Crocs x Cinnamon Toast Crunch All-Terrain Clog through our app now!</p>
         
         </div>
         <h2>New Shoes Arrivals</h2>
-        <div className='d-flex flex-row'>
+        <div>
         <ItemsHome  products={products} />
-        
         </div>
+        
+        
+        
         
         </>
     )

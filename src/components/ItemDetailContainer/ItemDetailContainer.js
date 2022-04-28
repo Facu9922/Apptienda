@@ -12,6 +12,7 @@ const ItemDetailContainer =({setCart, cart})=>{
     
     const { productId } = useParams()
     
+    
 
     useEffect(()=>{
         /* getProductsById(productId).then((item)=>{
@@ -25,6 +26,8 @@ const ItemDetailContainer =({setCart, cart})=>{
             const product = { id: response.id, ...response.data()}
             setProdcut(product)
         })
+
+       
 
     }, [productId])
 
