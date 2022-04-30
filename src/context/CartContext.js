@@ -12,6 +12,7 @@ export const CartContextProvider = ({children})=>{
         setCart([...cart,prodToAdd])
     }
 
+    
      const getcantidad = () => {
         let count = 0
         cart.forEach(prod => {
@@ -48,14 +49,18 @@ export const CartContextProvider = ({children})=>{
     return(
         
         <CartContext.Provider value={{
-            cart,
+            
+            
             addItem,
              getcantidad, 
              isInCart,
              clearCart,
              removeItem,
              getTotal,
-             cleanCart
+             cleanCart,
+             
+             cart,
+             
              
         }}>
         

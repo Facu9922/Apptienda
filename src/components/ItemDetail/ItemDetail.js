@@ -18,15 +18,18 @@ const ItemdDetail= ({product}) =>{
     /* const [tipoInput,SetTipoInput] =useState(true)
     const [cantidad, setCant] = useState()
      */
-    const {addItem, isInCart} = useContext(CartContext)
+    const {addItem, isInCart, } = useContext(CartContext)
     
     const handleAdd = (count)=>{
         const productObj = {
-            id, img, marca,precio, size, modelo, cantidad: count , selectedSize
+            id, img, marca,precio, modelo, cantidad: count , selectedSize
         }
 
         addItem(productObj)
+        
     }
+
+    
         /* console.log(count)
         
         setCant(count)

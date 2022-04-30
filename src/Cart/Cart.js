@@ -6,7 +6,7 @@ import { getDocs, writeBatch, query, where, collection, documentId, addDoc } fro
 const Cart = () => {
     const [loading, setLoading] = useState(false)
 
-    const { cart, getTotal, cleanCart, getcantidad } = useContext(CartContext)
+    const { cart, getTotal, cleanCart, getcantidad,  } = useContext(CartContext)
 
    
 
@@ -33,14 +33,16 @@ const Cart = () => {
 
         const outStock = []
 
+        
+
         getDocs(query(collectionRef, where(documentId(), 'in', ids)))
             .then(response => {
                 response.docs.forEach(doc => {
                     const dataDoc = doc.data()
-                    const prodQuantity = cart.find(prod => prod.id === doc.id)?.quantity
+                    const prodCant = cart.find(prod => prod.id === doc.id)?.cantidad
 
-                    if(dataDoc.stock >= prodQuantity) {
-                        batch.update(doc.ref, { stock: dataDoc.stock - prodQuantity})
+                    if(dataDoc.stock >= prodCant) {
+                        batch.update(doc.ref, { stock: dataDoc.stock - prodCant})
                     } else {
                         outStock.push({ id: doc.id, ...dataDoc })
                     }
@@ -54,9 +56,9 @@ const Cart = () => {
                 }
             }).then(({ id }) => {
                 batch.commit()
-                console.log(`El id de la orden es ${id}`)
+                alert(`El id de la orden es ${id}`)
             }).catch(error => {
-                console.log(error)
+                alert(error)
             }).finally(() => {
                 setLoading(false)
             })
@@ -72,18 +74,19 @@ const Cart = () => {
             <h1>No hay productos</h1>
         )
     } 
-  
     
 
     return (     
         <div>
             
-            { cart.map(p => <CartItem key={p.id} {...p}/>) }
+            { cart.map(p => <CartItem key={p.id}  {...p}/>) }
             <h3>Total: ${getTotal()}</h3>
+            
             <button onClick={() => cleanCart()} >Clear Cart</button>
             <button onClick={() => generateOrder()} >Generate Buy Order</button> 
 
         </div>
+        
     )
 }
 
