@@ -7,6 +7,8 @@ const CartItem =({id, marca, modelo, cantidad, precio, img, selectedSize})=>{
     const handleRemove = (id) =>{
         removeItem(id)
     }
+    
+       
     return(
         <article>
             <header>
@@ -26,3 +28,4 @@ const CartItem =({id, marca, modelo, cantidad, precio, img, selectedSize})=>{
     )
 }
 export default CartItem
+

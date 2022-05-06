@@ -8,8 +8,17 @@ export const CartContextProvider = ({children})=>{
      
     console.log(cart)
 
+    const saveCart =()=>{
+        localStorage.setItem("savecart", JSON.stringify(cart));
+    }
+    
+    
+
+
     const addItem =(prodToAdd)=>{
         setCart([...cart,prodToAdd])
+        
+
     }
 
     
@@ -22,7 +31,9 @@ export const CartContextProvider = ({children})=>{
     } 
     
     const isInCart =(id)=>{
+        
         return cart.some(prod=> prod.id === id)
+        
     }
    
     const clearCart = () =>{
@@ -58,6 +69,8 @@ export const CartContextProvider = ({children})=>{
              removeItem,
              getTotal,
              cleanCart,
+             saveCart,
+             
              
              cart,
              

@@ -3,12 +3,15 @@ import CartContext from "../context/CartContext"
 import CartItem from "../components/Cartitem/Cartitem"
 import { firestoreDb } from "../services/firebase/index"
 import { getDocs, writeBatch, query, where, collection, documentId, addDoc } from 'firebase/firestore'
+import { Link } from 'react-router-dom'
+
 const Cart = () => {
     const [loading, setLoading] = useState(false)
 
     const { cart, getTotal, cleanCart, getcantidad,  } = useContext(CartContext)
 
-   
+  
+  
 
     const generateOrder=()=>{
         setLoading(true)
@@ -84,7 +87,8 @@ const Cart = () => {
             
             <button onClick={() => cleanCart()} >Clear Cart</button>
             <button onClick={() => generateOrder()} >Generate Buy Order</button> 
-
+            <Link  to={'/form'}>Continuar compra</Link>
+            
         </div>
         
     )

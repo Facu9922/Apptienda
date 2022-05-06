@@ -13,22 +13,24 @@ import Select from "react-select"
 
 const ItemdDetail= ({product}) =>{
     const [selectedSize, setSelectedSize] = useState("")
-    const {id,stock, img, modelo, marca,detalle,size,precio,} =product
+    
+    const {id,stock, img, modelo, marca,detalle,precio,} =product
   /*   const [count, setCount] = useState(1) */
     /* const [tipoInput,SetTipoInput] =useState(true)
     const [cantidad, setCant] = useState()
      */
-    const {addItem, isInCart, } = useContext(CartContext)
+    const {addItem, isInCart, saveCart} = useContext(CartContext)
     
     const handleAdd = (count)=>{
         const productObj = {
             id, img, marca,precio, modelo, cantidad: count , selectedSize
         }
-
+        
         addItem(productObj)
         
     }
-
+    
+ 
     
         /* console.log(count)
         
@@ -68,7 +70,7 @@ const ItemdDetail= ({product}) =>{
             {/* <ItemCount onAdd={onAdd} stock={stock} initial={initial} count={count} /> */}
             <footer>
                 
-              { isInCart(id) ? <Link className="h3" to="/cart">Go to Cart </Link> : < Count onConfirm={handleAdd} stock={stock}/> } 
+              { isInCart(id) ? <Link onClick={saveCart} className="h3" to="/cart">  Go to Cart </Link> : < Count onConfirm={handleAdd} stock={stock}/> } 
               </footer>
         </section>
     )

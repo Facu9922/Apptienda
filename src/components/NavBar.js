@@ -3,6 +3,7 @@ import {  Link} from "react-router-dom"
 import { firestoreDb } from "../services/firebase"
 import {getDocs, collection} from "firebase/firestore"
 import { useEffect, useState } from "react"
+
 const NavBar=()=>{
     const [marca , setMarcas] =useState([])
     useEffect(()=>{
@@ -14,7 +15,8 @@ const NavBar=()=>{
       })
     },[marca])
 
-
+    
+    
 
     return(
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -68,7 +70,9 @@ const NavBar=()=>{
       
       <button className="btn btn-outline-dark" type="submit">Search</button>
     </form>
-          <button type="button" className="btn btn-dark me-3">Login</button>
+    
+   
+  
         </div>
       </nav>
        
