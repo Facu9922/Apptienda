@@ -1,14 +1,10 @@
 
 
 import { Link } from "react-router-dom";
-import './itemsHome.css'
+import "./itemsHome.css"
 
 const ItemsHome =({products})=>{
-/* const [productos, setProdcuts]= useState([])
 
-useEffect(()=>{
-getProducts().then(prods=>setProdcuts(prods)).catch(error=>console.log(error))
-},[]) */
 
 
 
@@ -24,7 +20,7 @@ return <>
     
         
           
-                <Link to={`/detail/${producto.id}`}><img  className="w-25" src= {producto.img} alt={producto.marca} /> </Link>
+                <Link to={`/detail/${producto.id}`}><img  className="img-thumbnail tamaño" src= {producto.img} alt={producto.marca}  />  </Link>
                
             
               

@@ -15,12 +15,7 @@ const ItemDetailContainer =({setCart, cart})=>{
     
 
     useEffect(()=>{
-        /* getProductsById(productId).then((item)=>{
-            setProdcut(item)
-        })
-         return(()=>{
-            setProdcut()
-        })  */
+        
         getDoc(doc(firestoreDb, "products", productId)).then(response=>{
             console.log(response)
             const product = { id: response.id, ...response.data()}

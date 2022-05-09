@@ -88,15 +88,15 @@ const Form = () => {
 
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div>
-                <div>
-                    <h1>Tus datos</h1>
-                    <label>Nombre: <input type='text' onChange={handleChange} name="nombre" value={input.nombre}/></label>
-                    <label>Email: <input type='text' onChange={handleChange} name="correo" value={input.correo}/></label>
-                    <label>Dirección: <input type='text' onChange={handleChange} name="direccion" value={input.direccion}/></label>
-                    <label>Teléfono:<input type="number" onChange={handleChange} name="telefono" value={input.telefono}/></label>
-                    <button onClick={() => createOrder()}>Finalizar compra</button>
+        <form  onSubmit={handleSubmit}>
+            <div >
+                <div className="d-flex flex-column container">
+                    <h1>Your Data</h1>
+                    <label>Name: <input type='text' className="form-control" onChange={handleChange} name="nombre" value={input.nombre}/></label>
+                    <label>Email: <input type="email" className="form-control" onChange={handleChange} name="correo" value={input.correo}/></label>
+                    <label>Adress: <input type='text' className="form-control" onChange={handleChange} name="direccion" value={input.direccion}/></label>
+                    <label>Phone:<input type="number" className="form-control" onChange={handleChange} name="telefono" value={input.telefono}/></label>
+                    <button className="btn btn-outline-secondary" onClick={() => createOrder()}>Checkout</button>
                 </div>
             </div>
         </form>

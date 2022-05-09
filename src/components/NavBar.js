@@ -33,34 +33,19 @@ const NavBar=()=>{
           </button>
           <div className="collapse navbar-collapse " id="navbarNav">
             <ul className="navbar-nav">
-              <li className="nav-item">
-              <Link className="nav-link" to="marca/Jordan"> Jordan </Link>
-              </li>
-              <li className="nav-item">
-              <Link  className="nav-link" to="marca/Nike">  Nike  </Link>
-              </li><li className="nav-item">
-              <Link  className="nav-link" to="marca/Vans">  Vans </Link>
-              </li>
-              <li className="nav-item">
-                <Link  className="nav-link" to="/list">Sneakers</Link>
-              </li>
-           {/*    <li className="nav-item dropdown">
-          <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Brands
-          </a>
-          <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li className="brands mx-5"> </li>
-            <li className="brands mx-5"> </li>
-            
-            
-          </ul>
-        </li> */}
-              <li className="nav-item">
-              <Link  className="nav-link" to="marca/OtherBrands">  Other Brands </Link>
-              </li>
-              <li className="nav-item">
-              <Link  className="nav-link" to="/sale">Sale</Link>
-              </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="marca/Jordan"> Jordan </Link>
+                </li>
+                <li className="nav-item">
+                  <Link  className="nav-link" to="marca/Nike">  Nike  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link  className="nav-link" to="marca/Vans">  Vans </Link>
+                </li>
+                <li className="nav-item">
+                  <Link  className="nav-link" to="/list">Sneakers</Link>
+                </li>
+          
             </ul>
           </div>
           <CartWidget/>

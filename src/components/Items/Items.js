@@ -6,11 +6,6 @@ import { Link } from "react-router-dom";
 
 
 const Items =({products})=>{
-/* const [productos, setProdcuts]= useState([])
-
-useEffect(()=>{
-getProducts().then(prods=>setProdcuts(prods)).catch(error=>console.log(error))
-},[]) */
 
 
 

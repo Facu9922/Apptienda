@@ -74,7 +74,7 @@ const Cart = () => {
     
     if(getcantidad=== 0) {
         return (
-            <h1>No hay productos</h1>
+            <h1>No products</h1>
         )
     } 
     
@@ -83,11 +83,11 @@ const Cart = () => {
         <div>
             
             { cart.map(p => <CartItem key={p.id}  {...p}/>) }
-            <h3>Total: ${getTotal()}</h3>
+             <h3>Total: ${getTotal()}</h3>
             
-            <button onClick={() => cleanCart()} >Clear Cart</button>
-            <button onClick={() => generateOrder()} >Generate Buy Order</button> 
-            <Link  to={'/form'}>Continuar compra</Link>
+                <button className="btn btn-outline-secondary mx-2" onClick={() => cleanCart()} >Clear Cart</button>
+            
+            <Link className="btn btn-outline-secondary" to={'/form'}>Continue Shopping</Link>
             
         </div>
         
